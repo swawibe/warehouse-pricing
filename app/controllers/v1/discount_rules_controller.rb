@@ -44,7 +44,7 @@ class V1::DiscountRulesController < ApplicationController
     @discount_rule = DiscountRule.find(params[:id])
   end
 
-  # Only allow a trusted parameter
+  # Only allow a trusted parameters
   def discount_rule_params
     params.fetch(:discount_rule, {}).permit(:name, :target_type, :discount_type,
                                             :discount, :bonus_after_reaching, :charge_per_square_foot,
